@@ -11,16 +11,16 @@ int main(void)
 	int seconddigit;
 	int thirddigit;
 
-	for (firstdigit = 0; firstdigit <= 7; firstdigit++)
+	for (firstdigit = 0; firstdigit <= 9; firstdigit++)
 	{
-		for (seconddigit = 1; seconddigit <= 8; seconddigit++)
+		for (seconddigit = 0; seconddigit <= 9; seconddigit++)
 		{
-			for (thirddigit = 2; thirddigit <= 9; thirddigit++)
+			for (thirddigit = 0; thirddigit <= 9; thirddigit++)
 			{
 				putchar(firstdigit + '0');
 				putchar(seconddigit + '0');
 				putchar(thirddigit + '0');
-				if (firstdigit != 7 || seconddigit != 8 || thirddigit != 9)
+				if (firstdigit != 9 || seconddigit != 8 || thirddigit != 7)
 				{
 					putchar(',');
 					putchar(' ');
