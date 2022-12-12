@@ -11,22 +11,20 @@
  */
 int main(void)
 {
-	int ch  = 'a';
-	int CH  = 'A';
-	/* this is the code */
-	while (ch <= 'z');
-	{
-		putchar(ch);
-		ch++;
-	}
-	while (CH <= 'Z');
-	{
-	
-		putchar(CH);
-		CH++;
-	}
-	putchar('\n');
-	return (0);
+	char lowercase = 'a';
+
+		char uppercase = 'A';
+
+		for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
+		{
+			putchar(lowercase);
+		}
+		for (uppercase = 'A'; uppercase <= 'Z'; uppercase++)
+		{
+			putchar(uppercase);
+		}
+		putchar('\n');
+		return (0);
 }
 
 
