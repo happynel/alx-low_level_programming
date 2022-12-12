@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main - print all digit of 
+ * main - print all digit of
  * the redix 16 number system
  *
  * Return: always 0 (success)
  */
 int main(void)
 {
-	char letter; 
+	char letter;
 
 	int number;
-	
+
 	for (letter = 'a'; letter <= 'f'; letter++)
 	{
 		while (number <= 9)
