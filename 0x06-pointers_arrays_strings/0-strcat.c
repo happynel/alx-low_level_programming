@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
+
 /**
  * *_strcat - a function that concatenates two strings.
  * @dest: The destination string
@@ -10,18 +9,14 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char s1[100] = "programming", s2[] = "is awesome";
-	int length = 0, i, j;
+	int a = -1, i;
 
-	while (s1[length] != '\0')
-		++length;
-	{
-		for (j = 0; s2[j] != '\0'; ++j, ++length)
-			s1[length] = s2[j];
-	}
-	s1[length] = s2[j];
-
-	s1[length] = '\0';
-	puts(s1);
-	return (0);
+	for (i = 0; dest[i] != '\0';)
+	i++;
+	do {
+		a++;
+		dest[i] = src[a];
+		i++;
+	} while (src[a] != '\0');
+	return (dest);
 }
