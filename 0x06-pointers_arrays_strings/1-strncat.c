@@ -7,7 +7,7 @@
  *
  * Return: Pointer to the resulting string dest
  */
-char *_strncat(char *dest, char *src, int c)
+char *_strncat(char *dest, char *src, int n)
 {
 	int dlen = 0, j = 0;
 
@@ -15,12 +15,12 @@ char *_strncat(char *dest, char *src, int c)
 	{
 		dlen++;
 	}
-	while(j < n && src[j])
-	{		
+	while (j < n && src[j])
+	{
 		dest[dlen] = src[j];
 	dlen++;
 	j++;
-
+	}
 	dest[dlen + n + 1] = '\0';
 	return (dest);
 }
