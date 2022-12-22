@@ -9,7 +9,7 @@ int main(void)
 {
 	int n;
 	int a[5];
-	int *p;
+i	int *p;
 
 	a[2] = 1024;
 	p = &n;
@@ -17,7 +17,7 @@ int main(void)
  * write your line of code here...
  * Remember:
  * - you are not allowed to use a
- *   - you are not allowed to use modify p
+ * - you are not allowed to use modify p
  * - only one statment
  * - you are not allowed to code anything else than this line of code
  */
