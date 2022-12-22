@@ -2,13 +2,13 @@
 /**
  * rot13 - functiin that encodes a string using rot13
  * @s: string
- * Return: encoded string
+ * Return: address of s
  */
 char *rot13(char *s)
 {
 	int i, j;
 
-	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 
