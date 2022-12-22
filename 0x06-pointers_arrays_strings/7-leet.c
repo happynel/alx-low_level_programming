@@ -7,22 +7,24 @@
  */
 char *leet(char *s)
 {
-	int a = 0, b = 0, l = 5;
-	char r [5] = {'A', 'E', 'O', 'T', 'L'};
-	char n [5] = {'4', '3', '0', '7', '1'};
+	int a;
+	int b;
 
-	while (s[a])
+	char lower[] = "aeotl";
+	char upper[] = "AEOTL";
+	char numbers[] = "43071";
+
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		b = 0;
-		while (b < 1)
+		for (b = 0; lower[b] != '\0' && upper[b] != '\0'; b++)
 		{
-			if (s[a] == r[b] || s[a] - 32 == r[b])
+			if (s[a] == lower[b] || s[a] == upper[b])
 			{
-				s[a] = n[b];
+				s[a] = numbers[b];
+				break;
 			}
-			b++;
 		}
-		a++;
 	}
+
 	return (s);
 }
