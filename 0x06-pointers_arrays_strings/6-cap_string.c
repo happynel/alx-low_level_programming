@@ -1,33 +1,35 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * cap_string - capitalize all words of a string
- * @s: ...
+ * @s: pointer to string
  *
- * Return char value
+ * Return: pointer to s.
  */
 char *cap_string(char *s)
 {
-	int i = 0, j;
-	char a[] = " \t\n,;.!?\"(){}";
+	int count;
 
-	while (*(s + i))
-	{
-		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+/* scan through string */
+	count = 0;
+	while (s[count] != '\0')
+	{/* if next character after count is a char, capitalise it */
+		if (s[0] >= 97 && s[0] <= 122)
 		{
-			if (i == 0)
-				*(s + i) -= 'a' - 'A';
-			else
-			{
-				for (j = 0; j <= 12; j++)
-				{
-					if (a[j] == *(s + i - 1))
-						*(s + i) -= 'a' - 'A';
-				}
-			}
-			i++;
+			s[0] = s[0] - 32;
 		}
-		return (s);
+		if (s[count] == ' ' || s[count] == '\t' || s[count] == '\n'
+				|| s[count] == ',' || s[count] == ';' || s[count] == '.'
+				|| s[count] == '.' || s[count] == '!' || s[count] == '?'
+				|| s[count] == '"' || s[count] == '(' || s[count] == ')'
+				|| s[count] == '{' || s[count] == '}')
+		{
+			if (s[count + 1] >= 97 && s[count + 1] <= 122)
+			{
+				s[count + 1] = s[count + 1] - 32;
+			}
+		}
+		count++;
 	}
+	return (s);
 }
