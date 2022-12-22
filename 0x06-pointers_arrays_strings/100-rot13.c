@@ -6,19 +6,19 @@
  */
 char *rot13(char *s)
 {
-	int a, b;
+	int i, j;
 
-	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char output[] = "NOPQRSTUVWXYZABDCEFGHIJKLMNOPQRSTUVWXYZabcdefghijklm";
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 
-	for (a = 0; s[a] != '\0'; a++)
+	for (i = 0; *(s + i); i++)
 	{
-		for (b = 0; input[b] != '\0'; b++)
+		for (j = 0; j < 52; j++)
 		{
-			if (s[a] == input[b])
+			if (a[j] == *(s + i))
 			{
-				s[a] = output[b];
+				*(s + i) = b[j];
 					break;
 			}
 		}
