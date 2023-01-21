@@ -1,14 +1,33 @@
 #include "function_pointers.h"
 /**
- * print_name - a function that prints a name
- * @name: the name given
- * @f: function of name
- *
- * Return: void
+ * main - generates opcodes.
+ * @argc: argument counter.
+ * @argv: argument vector.
+ * Return: the opcodes
  */
-void print_name(char *name, void (*f)(char *))
+int main(int argc, char **argv)
 {
-	if (name != NULL && f != NULL)
+	int i, number;
 
-		f(name);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	number = atoi(argv[1]);
+	if (number < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	for (i = 0; i < number; i++)
+	{
+		printf("%02hhx", ((char *)main)[i]);
+		if (i == (number - 1))
+			printf("\n");
+		else
+			printf(" ");
+	}
+	return (0);
 }
